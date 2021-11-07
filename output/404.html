@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>404 | Your awesome title</title>
+
+<meta name="description" content="Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+
+<link rel="stylesheet" href="/_bridgetown/static/css/main.a82a669ccd5b09f8ef04.css" />
+<script src="/_bridgetown/static/js/main.0811b103c2b1181ddec3.js" defer></script>
+<script type="module">let first_mod = 0
+let connection_errors = 0
+const checkForReload = () => {
+  fetch("/_bridgetown/live_reload").then(response => {
+    if (response.ok) {
+      response.json().then(data => {
+        const last_mod = data.last_mod
+        if (first_mod === 0) {
+          first_mod = last_mod
+        } else if (last_mod > first_mod) {
+          location.reload()
+        }
+        setTimeout(() => checkForReload(), 700)
+      })
+    } else {
+      if (connection_errors < 20) setTimeout(() => checkForReload(), 6000)
+      connection_errors++
+    }
+  }).catch((err) => {
+    if (connection_errors < 20) setTimeout(() => checkForReload(), 6000)
+    connection_errors++
+  })
+}
+checkForReload()
+</script>
+
+  </head>
+  <body class="default ">
+    <nav>
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+  <a href="/posts">Posts</a>
+</nav>
+
+
+    <main>
+      <h1>404</h1>
+
+<p><strong>Page not found :(</strong></p>
+<p>The requested page could not be found.</p>
+
+    </main>
+
+    <footer>
+  Contact me at <a href="mailto:your-email@example.com">your-email@example.com</a>
+</footer>
+
+  </body>
+</html>
